@@ -16,11 +16,11 @@
     <canvas id="pl14-grid" class="absolute inset-0 w-full h-full pointer-events-none" style="opacity: 0.04;"></canvas>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 32px 64px;">
 
         {{-- Header --}}
-        <div class="pl14-stagger-1" style="margin-bottom: 40px;">
-            <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <div class="pl14-stagger-1" style="margin-bottom: 20px;">
+            <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                 <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 12px rgba(17,193,143,0.4);"></div>
                 <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(17,193,143,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">What Needs To Happen</span>
             </div>
@@ -30,7 +30,7 @@
         </div>
 
         {{-- Two-column layout --}}
-        <div class="flex-1 flex gap-8" style="max-width: 1400px; width: 100%;">
+        <div class="flex-1 flex gap-6" style="max-width: 1400px; width: 100%;">
 
             {{-- FSM Column --}}
             <div class="flex-1 flex flex-col">
@@ -39,10 +39,10 @@
                     <span>FSM</span>
                 </div>
 
-                <div class="flex flex-col gap-3 flex-1">
+                <div class="flex flex-col gap-2 flex-1">
                     <div class="pl14-stagger-3 pl14-card">
                         <div class="pl14-card-icon pl14-icon-framework">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Framework Upgrade</div>
@@ -53,7 +53,7 @@
 
                     <div class="pl14-stagger-4 pl14-card">
                         <div class="pl14-card-icon pl14-icon-ui">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">UI Overhaul</div>
@@ -64,7 +64,7 @@
 
                     <div class="pl14-stagger-5 pl14-card">
                         <div class="pl14-card-icon pl14-icon-mobile">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Native Mobile App</div>
@@ -75,7 +75,7 @@
 
                     <div class="pl14-stagger-6 pl14-card">
                         <div class="pl14-card-icon pl14-icon-refactor">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Core Refactoring</div>
@@ -86,7 +86,7 @@
 
                     <div class="pl14-stagger-7 pl14-card">
                         <div class="pl14-card-icon pl14-icon-infra">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Deployment Overhaul</div>
@@ -104,10 +104,10 @@
                     <span>WE</span>
                 </div>
 
-                <div class="flex flex-col gap-3 flex-1">
+                <div class="flex flex-col gap-2 flex-1">
                     <div class="pl14-stagger-3 pl14-card">
                         <div class="pl14-card-icon pl14-icon-framework">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Framework Upgrade</div>
@@ -118,7 +118,7 @@
 
                     <div class="pl14-stagger-4 pl14-card">
                         <div class="pl14-card-icon pl14-icon-infra">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Move Off Vapor</div>
@@ -129,7 +129,7 @@
 
                     <div class="pl14-stagger-5 pl14-card">
                         <div class="pl14-card-icon pl14-icon-refactor">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Provisioning Architecture</div>
@@ -140,7 +140,7 @@
 
                     <div class="pl14-stagger-6 pl14-card">
                         <div class="pl14-card-icon pl14-icon-refactor">
-                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+                            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
                         </div>
                         <div class="pl14-card-content">
                             <div class="pl14-card-label">Multi-ISP Support</div>
@@ -153,13 +153,13 @@
         </div>
 
         {{-- Shared row --}}
-        <div class="pl14-stagger-8" style="margin-top: 28px;">
+        <div class="pl14-stagger-8" style="margin-top: 16px;">
             <div class="pl14-shared-label">
                 <div style="flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.15));"></div>
                 <span>Both Products</span>
                 <div style="flex: 1; height: 1px; background: linear-gradient(to left, transparent, rgba(17,193,143,0.15));"></div>
             </div>
-            <div class="flex gap-6" style="margin-top: 12px;">
+            <div class="flex gap-5" style="margin-top: 8px;">
                 <div class="pl14-shared-card">
                     <div class="pl14-shared-icon">
                         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#11C18F" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" /></svg>
@@ -192,7 +192,7 @@
     .pl14-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
         letter-spacing: -0.03em;
         line-height: 1.1;
         color: rgba(255,255,255,0.9);
@@ -216,13 +216,13 @@
     .pl14-column-header {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding: 10px 18px;
-        border-radius: 10px 10px 0 0;
-        margin-bottom: 12px;
+        gap: 8px;
+        padding: 7px 14px;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 8px;
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 0.03em;
     }
 
@@ -244,9 +244,9 @@
     .pl14-card {
         display: flex;
         align-items: center;
-        gap: 14px;
-        padding: 14px 18px;
-        border-radius: 12px;
+        gap: 10px;
+        padding: 9px 14px;
+        border-radius: 10px;
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.05);
         transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -275,12 +275,12 @@
     }
 
     .pl14-card-icon {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 10px;
+        border-radius: 8px;
         flex-shrink: 0;
         position: relative;
         z-index: 1;
@@ -301,16 +301,16 @@
     .pl14-card-label {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 13px;
         color: rgba(255,255,255,0.85);
         letter-spacing: -0.01em;
     }
 
     .pl14-card-text {
         font-family: 'Sora', sans-serif;
-        font-size: 12.5px;
+        font-size: 11px;
         color: rgba(255,255,255,0.4);
-        margin-top: 2px;
+        margin-top: 1px;
         font-weight: 400;
     }
 
@@ -349,9 +349,9 @@
         flex: 1;
         display: flex;
         align-items: center;
-        gap: 16px;
-        padding: 16px 20px;
-        border-radius: 12px;
+        gap: 12px;
+        padding: 10px 16px;
+        border-radius: 10px;
         background: linear-gradient(135deg, rgba(17,193,143,0.04), rgba(17,193,143,0.01));
         border: 1px solid rgba(17,193,143,0.1);
         transition: all 0.4s ease;
@@ -363,12 +363,12 @@
     }
 
     .pl14-shared-icon {
-        width: 44px;
-        height: 44px;
+        width: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 12px;
+        border-radius: 10px;
         background: rgba(17,193,143,0.06);
         border: 1px solid rgba(17,193,143,0.12);
         flex-shrink: 0;
@@ -377,15 +377,15 @@
     .pl14-shared-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 13px;
         color: rgba(255,255,255,0.85);
     }
 
     .pl14-shared-desc {
         font-family: 'Sora', sans-serif;
-        font-size: 12px;
+        font-size: 11px;
         color: rgba(255,255,255,0.35);
-        margin-top: 2px;
+        margin-top: 1px;
     }
 
     /* Reveal animations */

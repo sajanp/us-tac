@@ -10,7 +10,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 32px 72px;">
 
         {{-- Top bar --}}
         <div class="pl03-stagger-1 flex items-center justify-between">
@@ -22,22 +22,22 @@
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1200px; margin: 0 auto; width: 100%;">
 
             {{-- Heading --}}
-            <div class="pl03-stagger-2" style="margin-bottom: 12px;">
-                <div class="inline-flex items-center gap-3 mb-5">
+            <div class="pl03-stagger-2" style="margin-bottom: 8px;">
+                <div class="inline-flex items-center gap-3 mb-3">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background: #E86E4B; box-shadow: 0 0 10px rgba(232,110,75,0.4);"></div>
                     <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(232,110,75,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">The Detour</span>
                 </div>
             </div>
 
-            <div class="pl03-stagger-3" style="margin-bottom: 48px;">
+            <div class="pl03-stagger-3" style="margin-bottom: 20px;">
                 <h1 class="pl03-headline">Service Zones</h1>
-                <p style="font-family: 'Sora', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.35); line-height: 1.7; margin-top: 16px; max-width: 560px;">
+                <p style="font-family: 'Sora', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.35); line-height: 1.6; margin-top: 10px; max-width: 560px;">
                     A door-opener for BE customers. Launched. Struggled. Merged.
                 </p>
             </div>
 
             {{-- Two-column layout: Chart + Narrative --}}
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
 
                 {{-- Left: Donut Chart --}}
                 <div class="pl03-stagger-4">
@@ -134,7 +134,7 @@
     .pl03-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-size: clamp(2rem, 4vw, 3rem);
         letter-spacing: -0.03em;
         line-height: 1.05;
         color: rgba(255,255,255,0.9);
@@ -143,9 +143,9 @@
     /* Donut chart */
     .pl03-chart-container {
         position: relative;
-        width: 280px;
-        height: 280px;
-        margin: 0 auto 28px;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 12px;
     }
     .pl03-donut {
         width: 100%;
@@ -172,13 +172,17 @@
         transform: translate(-50%, -50%);
         text-align: center;
         opacity: 0;
-        animation: pl03-reveal 0.6s ease-out 2.5s forwards;
+        animation: pl03-center-reveal 0.6s ease-out 2.5s forwards;
+    }
+    @keyframes pl03-center-reveal {
+        from { opacity: 0; }
+        to { opacity: 1; transform: translate(-50%, -50%); }
     }
     .pl03-chart-pct {
         display: block;
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: 2.8rem;
+        font-size: 2rem;
         color: #E86E4B;
         line-height: 1;
         text-shadow: 0 0 30px rgba(232,110,75,0.3);
@@ -209,13 +213,13 @@
     .pl03-narrative {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
     }
     .pl03-narr-step {
         display: flex;
         align-items: flex-start;
-        gap: 16px;
-        padding: 16px 20px;
+        gap: 10px;
+        padding: 8px 14px;
         border-radius: 12px;
         background: rgba(232,110,75,0.02);
         border: 1px solid rgba(232,110,75,0.05);
@@ -237,7 +241,7 @@
     .pl03-narr-num {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 1.1rem;
+        font-size: 0.95rem;
         color: rgba(232,110,75,0.25);
         flex-shrink: 0;
         margin-top: 1px;
@@ -248,15 +252,15 @@
     .pl03-narr-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         color: rgba(255,255,255,0.8);
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
     .pl03-narr-body {
         font-family: 'Sora', sans-serif;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: rgba(255,255,255,0.3);
-        line-height: 1.55;
+        line-height: 1.45;
     }
 
     /* Aurora */

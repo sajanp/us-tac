@@ -16,10 +16,10 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 28px 56px;">
 
         {{-- Header --}}
-        <div class="pl13-stagger-1 flex items-center justify-between" style="margin-bottom: 32px;">
+        <div class="pl13-stagger-1 flex items-center justify-between" style="margin-bottom: 14px;">
             <div>
                 <h1 class="pl13-headline">
                     The <span class="pl13-coral-text">Honest</span> Truth
@@ -38,20 +38,20 @@
         </div>
 
         {{-- Column headers --}}
-        <div class="pl13-stagger-2" style="display: grid; grid-template-columns: 160px 1fr 1fr; gap: 0; margin-bottom: 6px;">
+        <div class="pl13-stagger-2" style="display: grid; grid-template-columns: 110px 1fr 1fr; gap: 0; margin-bottom: 4px;">
             <div></div>
             <div class="pl13-col-header pl13-col-fsm">
-                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#11C18F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" /></svg>
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#11C18F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" /></svg>
                 <span>Field Service Management</span>
             </div>
             <div class="pl13-col-header pl13-col-we">
-                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#E86E4B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
+                <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#E86E4B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
                 <span>Wholesale Engine</span>
             </div>
         </div>
 
         {{-- Grid rows --}}
-        <div class="flex-1 flex flex-col gap-3">
+        <div class="flex-1 flex flex-col gap-2">
 
             {{-- ROW 1: Development --}}
             <div class="pl13-stagger-3 pl13-row">
@@ -225,7 +225,7 @@
         </div>
 
         {{-- Bottom summary --}}
-        <div class="pl13-stagger-6 flex items-center justify-center" style="margin-top: 20px;">
+        <div class="pl13-stagger-6 flex items-center justify-center" style="margin-top: 10px;">
             <div class="flex items-center gap-5">
                 <div style="width: 60px; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.3));"></div>
                 <span style="font-family: 'Sora', sans-serif; font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.05em;">
@@ -250,7 +250,7 @@
     .pl13-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
         letter-spacing: -0.03em;
         line-height: 1.1;
         color: rgba(255,255,255,0.9);
@@ -265,12 +265,12 @@
     .pl13-col-header {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 16px;
-        border-radius: 8px 8px 0 0;
+        gap: 6px;
+        padding: 5px 12px;
+        border-radius: 6px 6px 0 0;
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 13px;
+        font-size: 11px;
         letter-spacing: 0.03em;
     }
 
@@ -293,7 +293,7 @@
     /* Row layout */
     .pl13-row {
         display: grid;
-        grid-template-columns: 160px 1fr 1fr;
+        grid-template-columns: 110px 1fr 1fr;
         gap: 0;
         min-height: 0;
     }
@@ -304,11 +304,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 6px;
-        padding: 12px 8px;
+        gap: 4px;
+        padding: 8px 6px;
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 0.02em;
         color: rgba(255,255,255,0.7);
         text-transform: uppercase;
@@ -316,12 +316,12 @@
     }
 
     .pl13-row-icon {
-        width: 32px;
-        height: 32px;
+        width: 26px;
+        height: 26px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
+        border-radius: 6px;
         background: rgba(255,255,255,0.03);
         border: 1px solid rgba(255,255,255,0.06);
         color: rgba(255,255,255,0.4);
@@ -329,9 +329,9 @@
 
     /* Cells */
     .pl13-cell {
-        padding: 10px 14px;
-        border-radius: 10px;
-        margin: 0 6px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        margin: 0 4px;
         position: relative;
         overflow: hidden;
     }
@@ -365,19 +365,19 @@
     .pl13-cell-inner {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 3px;
     }
 
     /* Items */
     .pl13-item {
         display: flex;
         align-items: flex-start;
-        gap: 8px;
+        gap: 6px;
         font-family: 'Sora', sans-serif;
-        font-size: 12.5px;
+        font-size: 11px;
         font-weight: 400;
         color: rgba(255,255,255,0.55);
-        line-height: 1.5;
+        line-height: 1.4;
     }
 
     .pl13-item strong {
@@ -387,9 +387,9 @@
 
     .pl13-highlight-green {
         background: rgba(17,193,143,0.06);
-        padding: 4px 8px;
-        border-radius: 6px;
-        margin: 1px -4px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin: 1px -3px;
     }
 
     .pl13-highlight-green strong {
@@ -398,9 +398,9 @@
 
     .pl13-highlight-coral {
         background: rgba(232,110,75,0.08);
-        padding: 4px 8px;
-        border-radius: 6px;
-        margin: 1px -4px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin: 1px -3px;
     }
 
     .pl13-highlight-coral strong {
@@ -409,9 +409,9 @@
 
     .pl13-highlight-amber {
         background: rgba(239,214,27,0.06);
-        padding: 4px 8px;
-        border-radius: 6px;
-        margin: 1px -4px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin: 1px -3px;
     }
 
     .pl13-highlight-amber strong {
@@ -421,13 +421,13 @@
     .pl13-quote-coral {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 14px;
+        font-size: 12px;
         color: #E86E4B;
-        padding: 6px 10px;
+        padding: 4px 8px;
         background: rgba(232,110,75,0.08);
-        border-left: 3px solid rgba(232,110,75,0.4);
-        border-radius: 0 6px 6px 0;
-        margin-top: 2px;
+        border-left: 2px solid rgba(232,110,75,0.4);
+        border-radius: 0 4px 4px 0;
+        margin-top: 1px;
         text-shadow: 0 0 20px rgba(232,110,75,0.3);
         display: flex;
         align-items: center;
@@ -436,10 +436,10 @@
     /* Status dots */
     .pl13-dot {
         flex-shrink: 0;
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
-        margin-top: 6px;
+        margin-top: 5px;
     }
 
     .pl13-dot-green {

@@ -28,12 +28,12 @@
     </svg>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 36px 64px;">
 
         {{-- Header --}}
-        <div class="pl16-stagger-1 flex items-center justify-between" style="margin-bottom: 44px;">
+        <div class="pl16-stagger-1 flex items-center justify-between" style="margin-bottom: 24px;">
             <div>
-                <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 12px rgba(17,193,143,0.4);"></div>
                     <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(17,193,143,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">Action Items</span>
                 </div>
@@ -45,8 +45,8 @@
         </div>
 
         {{-- Two-column items (FSM / WE) --}}
-        <div class="flex-1 flex flex-col gap-6">
-            <div class="flex gap-8">
+        <div class="flex-1 flex flex-col gap-4">
+            <div class="flex gap-6">
 
                 {{-- FSM Column --}}
                 <div class="flex-1">
@@ -54,7 +54,7 @@
                         <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#11C18F" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63" /></svg>
                         <span>FSM Focus</span>
                     </div>
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-3">
                         <div class="pl16-stagger-3 pl16-action-item">
                             <div class="pl16-action-number">1</div>
                             <div class="pl16-action-content">
@@ -78,7 +78,7 @@
                         <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="#48AAA5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375" /></svg>
                         <span>WE Focus</span>
                     </div>
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-3">
                         <div class="pl16-stagger-3 pl16-action-item pl16-action-we">
                             <div class="pl16-action-number pl16-num-we">3</div>
                             <div class="pl16-action-content">
@@ -99,7 +99,7 @@
             </div>
 
             {{-- Shared items spanning full width --}}
-            <div class="pl16-stagger-5" style="margin-top: 8px;">
+            <div class="pl16-stagger-5" style="margin-top: 2px;">
                 <div class="pl16-divider">
                     <div style="flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.15));"></div>
                     <span style="font-family: 'Sora', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(17,193,143,0.4);">Both Products</span>
@@ -107,7 +107,7 @@
                 </div>
             </div>
 
-            <div class="flex gap-8">
+            <div class="flex gap-6">
                 <div class="pl16-stagger-6 pl16-action-item pl16-action-shared flex-1">
                     <div class="pl16-action-number pl16-num-shared">5</div>
                     <div class="pl16-action-content">
@@ -126,7 +126,7 @@
         </div>
 
         {{-- Bottom closer --}}
-        <div class="pl16-stagger-8 flex items-center justify-center" style="margin-top: 32px;">
+        <div class="pl16-stagger-8 flex items-center justify-center" style="margin-top: 16px;">
             <div class="flex items-center gap-5">
                 <div style="width: 80px; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.35));"></div>
                 <div style="width: 8px; height: 8px; transform: rotate(45deg); border: 1px solid rgba(17,193,143,0.35);"></div>
@@ -177,7 +177,7 @@
     .pl16-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
         letter-spacing: -0.03em;
         line-height: 1.1;
         color: rgba(255,255,255,0.9);
@@ -202,9 +202,9 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
         font-family: 'Sora', sans-serif;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 600;
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -219,9 +219,9 @@
     .pl16-action-item {
         display: flex;
         align-items: flex-start;
-        gap: 18px;
-        padding: 20px 24px;
-        border-radius: 14px;
+        gap: 14px;
+        padding: 14px 18px;
+        border-radius: 12px;
         background: rgba(255,255,255,0.015);
         border: 1px solid rgba(255,255,255,0.05);
         position: relative;
@@ -274,12 +274,12 @@
     .pl16-action-number {
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: 36px;
+        font-size: 28px;
         line-height: 1;
         color: #11C18F;
         opacity: 0.8;
         flex-shrink: 0;
-        width: 44px;
+        width: 36px;
         text-align: center;
         position: relative;
         z-index: 1;
@@ -303,13 +303,13 @@
     .pl16-action-content {
         position: relative;
         z-index: 1;
-        padding-top: 4px;
+        padding-top: 2px;
     }
 
     .pl16-action-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
         color: rgba(255,255,255,0.85);
         letter-spacing: -0.01em;
         line-height: 1.3;
@@ -317,11 +317,11 @@
 
     .pl16-action-desc {
         font-family: 'Sora', sans-serif;
-        font-size: 13px;
+        font-size: 11.5px;
         color: rgba(255,255,255,0.35);
-        margin-top: 4px;
+        margin-top: 2px;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.45;
     }
 
     /* Divider */

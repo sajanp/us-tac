@@ -22,7 +22,7 @@
     <canvas id="pl10-embers" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 40px 72px;">
 
         {{-- Top bar --}}
         <div class="pl10-stagger-1 flex items-center justify-between">
@@ -34,12 +34,12 @@
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1100px; width: 100%;">
 
             {{-- Hero text --}}
-            <div class="pl10-stagger-2" style="margin-bottom: 56px;">
+            <div class="pl10-stagger-2" style="margin-bottom: 36px;">
                 <h1 class="pl10-hero-text">We did it.</h1>
             </div>
 
             {{-- Three honest-but-proud blocks --}}
-            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 56px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 36px;">
 
                 <div class="pl10-stagger-3 pl10-quote-block">
                     <div class="pl10-quote-accent" style="background: #11C18F;"></div>
@@ -68,7 +68,7 @@
             </div>
 
             {{-- The $100mm stat --}}
-            <div class="pl10-stagger-6" style="margin-bottom: 56px;">
+            <div class="pl10-stagger-6" style="margin-bottom: 36px;">
                 <div class="pl10-stat-block">
                     <div class="pl10-stat-label">Prime didn't have to pay Compax Digital</div>
                     <div class="pl10-stat-number">
@@ -107,7 +107,7 @@
     .pl10-hero-text {
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: clamp(4rem, 10vw, 8rem);
+        font-size: clamp(3.5rem, 8vw, 6.5rem);
         letter-spacing: -0.04em;
         line-height: 1;
         color: rgba(255,255,255,0.95);
@@ -119,7 +119,7 @@
         top: 0; left: 0;
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: clamp(4rem, 10vw, 8rem);
+        font-size: clamp(3.5rem, 8vw, 6.5rem);
         letter-spacing: -0.04em;
         color: rgba(17,193,143,0.15);
         filter: blur(40px);
@@ -159,8 +159,8 @@
     /* Quote blocks */
     .pl10-quote-block {
         display: flex;
-        gap: 16px;
-        padding: 20px;
+        gap: 14px;
+        padding: 16px;
         border-radius: 8px;
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.04);
@@ -216,18 +216,18 @@
         align-items: baseline;
     }
     .pl10-dollar {
-        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-size: clamp(1.8rem, 4vw, 3rem);
         color: rgba(17,193,143,0.6);
     }
     .pl10-amount {
-        font-size: clamp(3rem, 7vw, 5rem);
+        font-size: clamp(2.5rem, 6vw, 4.2rem);
         background: linear-gradient(135deg, #11C18F, #AFEFCD);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
     .pl10-unit {
-        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
         color: rgba(17,193,143,0.6);
         margin-left: 4px;
     }

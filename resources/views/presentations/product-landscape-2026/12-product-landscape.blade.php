@@ -16,7 +16,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 40px 72px;">
 
         {{-- Top bar --}}
         <div class="pl12-stagger-1 flex items-center justify-between">
@@ -34,7 +34,7 @@
         </div>
 
         {{-- Then vs Now --}}
-        <div class="pl12-stagger-3" style="margin-bottom: 48px;">
+        <div class="pl12-stagger-3" style="margin-bottom: 32px;">
             <div class="flex items-center gap-4">
                 <span class="pl12-then-label">Then</span>
                 <div class="pl12-then-bar">
@@ -50,7 +50,7 @@
         </div>
 
         {{-- Main bars --}}
-        <div class="flex-1 flex flex-col justify-center" style="max-width: 1100px; width: 100%; gap: 20px;">
+        <div class="flex-1 flex flex-col justify-center" style="max-width: 1100px; width: 100%; gap: 14px;">
 
             {{-- FSM Bar --}}
             <div class="pl12-bar-row pl12-bar-1">
@@ -110,7 +110,7 @@
         </div>
 
         {{-- Bottom note --}}
-        <div class="pl12-stagger-4" style="margin-top: 40px;">
+        <div class="pl12-stagger-4" style="margin-top: 28px;">
             <div class="flex items-center gap-4">
                 <div style="width: 40px; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.25));"></div>
                 <p style="font-family: 'Sora', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.3); line-height: 1.6;">
@@ -129,7 +129,7 @@
     .pl12-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        font-size: clamp(2rem, 4.5vw, 3.2rem);
         letter-spacing: -0.03em;
         line-height: 1.08;
         color: rgba(255,255,255,0.9);
@@ -202,7 +202,7 @@
     /* Bar track */
     .pl12-bar-track {
         position: relative;
-        height: 40px;
+        height: 34px;
         border-radius: 6px;
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.03);

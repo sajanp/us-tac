@@ -12,29 +12,29 @@
         {!! $slot !!}
     </main>
 
-    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-6 bg-[#10141F]/90 backdrop-blur px-6 py-3 rounded-full border border-gray-700">
+    <nav class="fixed bottom-4 left-4 flex items-center gap-3 bg-[#10141F]/70 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-700/50 opacity-40 hover:opacity-100 transition-opacity">
         @if($prevSlide)
-            <a href="{{ $prevSlide }}" class="text-gray-300 hover:text-[#11C18F] transition-colors" aria-label="Previous slide">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <a href="{{ $prevSlide }}" class="text-gray-400 hover:text-[#11C18F] transition-colors" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </a>
         @else
-            <span class="text-gray-600 w-6"></span>
+            <span class="text-gray-600 w-3.5"></span>
         @endif
 
-        <span class="text-gray-400 font-mono text-sm min-w-[60px] text-center">
-            {{ $currentSlide }} / {{ $totalSlides }}
+        <span class="text-gray-500 font-mono text-xs min-w-[40px] text-center">
+            {{ $currentSlide }}/{{ $totalSlides }}
         </span>
 
         @if($nextSlide)
-            <a href="{{ $nextSlide }}" class="text-gray-300 hover:text-[#11C18F] transition-colors" aria-label="Next slide">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <a href="{{ $nextSlide }}" class="text-gray-400 hover:text-[#11C18F] transition-colors" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </a>
         @else
-            <span class="text-gray-600 w-6"></span>
+            <span class="text-gray-600 w-3.5"></span>
         @endif
     </nav>
 

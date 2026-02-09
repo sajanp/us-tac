@@ -15,39 +15,39 @@
     </div>
 
     {{-- Fork diagram SVG --}}
-    <svg class="pl08-fork-svg" viewBox="0 0 600 240" preserveAspectRatio="xMidYMid meet">
+    <svg class="pl08-fork-svg" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
         {{-- Main trunk --}}
-        <path class="pl08-path-trunk" d="M 60 120 L 200 120" fill="none" stroke="rgba(17,193,143,0.4)" stroke-width="3" stroke-linecap="round" />
+        <path class="pl08-path-trunk" d="M 60 100 L 200 100" fill="none" stroke="rgba(17,193,143,0.4)" stroke-width="3" stroke-linecap="round" />
         {{-- Fork point glow --}}
-        <circle cx="200" cy="120" r="20" fill="rgba(232,110,75,0.06)" class="pl08-fork-glow" />
-        <circle cx="200" cy="120" r="6" fill="#E86E4B" class="pl08-fork-dot" />
+        <circle cx="200" cy="100" r="20" fill="rgba(232,110,75,0.06)" class="pl08-fork-glow" />
+        <circle cx="200" cy="100" r="6" fill="#E86E4B" class="pl08-fork-dot" />
         {{-- Upper branch: FSM --}}
-        <path class="pl08-path-fsm" d="M 200 120 C 280 120, 320 50, 400 50" fill="none" stroke="rgba(17,193,143,0.4)" stroke-width="2.5" stroke-linecap="round" />
+        <path class="pl08-path-fsm" d="M 200 100 C 280 100, 320 40, 400 40" fill="none" stroke="rgba(17,193,143,0.4)" stroke-width="2.5" stroke-linecap="round" />
         {{-- Lower branch: WE --}}
-        <path class="pl08-path-we" d="M 200 120 C 280 120, 320 190, 400 190" fill="none" stroke="rgba(72,170,165,0.4)" stroke-width="2.5" stroke-linecap="round" />
+        <path class="pl08-path-we" d="M 200 100 C 280 100, 320 160, 400 160" fill="none" stroke="rgba(72,170,165,0.4)" stroke-width="2.5" stroke-linecap="round" />
         {{-- BE label --}}
-        <text x="60" y="108" fill="rgba(255,255,255,0.2)" font-family="Sora, sans-serif" font-size="10" font-weight="500" letter-spacing="0.1em">BUSINESS ENGINE</text>
+        <text x="60" y="88" fill="rgba(255,255,255,0.2)" font-family="Sora, sans-serif" font-size="10" font-weight="500" letter-spacing="0.1em">BUSINESS ENGINE</text>
         {{-- Fork label --}}
-        <text x="210" y="126" fill="rgba(232,110,75,0.6)" font-family="Sora, sans-serif" font-size="9" font-weight="600" letter-spacing="0.15em">DECISION</text>
+        <text x="210" y="106" fill="rgba(232,110,75,0.6)" font-family="Sora, sans-serif" font-size="9" font-weight="600" letter-spacing="0.15em">DECISION</text>
         {{-- FSM endpoint --}}
-        <circle cx="400" cy="50" r="24" fill="rgba(17,193,143,0.06)" stroke="rgba(17,193,143,0.2)" stroke-width="1" class="pl08-endpoint" />
-        <text x="400" y="46" fill="#11C18F" font-family="Cairo, sans-serif" font-size="13" font-weight="800" text-anchor="middle">FSM</text>
-        <text x="400" y="59" fill="rgba(255,255,255,0.3)" font-family="Sora, sans-serif" font-size="8" text-anchor="middle">Field Service</text>
+        <circle cx="400" cy="40" r="24" fill="rgba(17,193,143,0.06)" stroke="rgba(17,193,143,0.2)" stroke-width="1" class="pl08-endpoint" />
+        <text x="400" y="36" fill="#11C18F" font-family="Cairo, sans-serif" font-size="13" font-weight="800" text-anchor="middle">FSM</text>
+        <text x="400" y="49" fill="rgba(255,255,255,0.3)" font-family="Sora, sans-serif" font-size="8" text-anchor="middle">Field Service</text>
         {{-- WE endpoint --}}
-        <circle cx="400" cy="190" r="24" fill="rgba(72,170,165,0.06)" stroke="rgba(72,170,165,0.2)" stroke-width="1" class="pl08-endpoint" />
-        <text x="400" y="186" fill="#48AAA5" font-family="Cairo, sans-serif" font-size="13" font-weight="800" text-anchor="middle">WE</text>
-        <text x="400" y="199" fill="rgba(255,255,255,0.3)" font-family="Sora, sans-serif" font-size="8" text-anchor="middle">Wholesale</text>
+        <circle cx="400" cy="160" r="24" fill="rgba(72,170,165,0.06)" stroke="rgba(72,170,165,0.2)" stroke-width="1" class="pl08-endpoint" />
+        <text x="400" y="156" fill="#48AAA5" font-family="Cairo, sans-serif" font-size="13" font-weight="800" text-anchor="middle">WE</text>
+        <text x="400" y="169" fill="rgba(255,255,255,0.3)" font-family="Sora, sans-serif" font-size="8" text-anchor="middle">Wholesale</text>
         {{-- Animated particles --}}
         <circle r="2.5" fill="#11C18F" opacity="0.7">
-            <animateMotion dur="2.5s" repeatCount="indefinite" path="M 200 120 C 280 120, 320 50, 400 50" begin="2s" />
+            <animateMotion dur="2.5s" repeatCount="indefinite" path="M 200 100 C 280 100, 320 40, 400 40" begin="2s" />
         </circle>
         <circle r="2.5" fill="#48AAA5" opacity="0.7">
-            <animateMotion dur="3s" repeatCount="indefinite" path="M 200 120 C 280 120, 320 190, 400 190" begin="2.3s" />
+            <animateMotion dur="3s" repeatCount="indefinite" path="M 200 100 C 280 100, 320 160, 400 160" begin="2.3s" />
         </circle>
     </svg>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 40px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 28px 72px;">
 
         {{-- Top bar --}}
         <div class="pl08-stagger-1 flex items-center justify-between">
@@ -61,11 +61,11 @@
         </div>
 
         {{-- Heading --}}
-        <div class="pl08-stagger-2" style="margin-top: 24px; margin-bottom: 20px;">
+        <div class="pl08-stagger-2" style="margin-top: 16px; margin-bottom: 12px;">
             <h1 class="pl08-headline">
                 <span style="color: rgba(255,255,255,0.95);">AT&T</span> <span class="pl08-gradient-text">Changes Everything</span>
             </h1>
-            <p style="font-family: 'Sora', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.3); max-width: 600px; line-height: 1.6; margin-top: 8px;">
+            <p style="font-family: 'Sora', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.3); max-width: 600px; line-height: 1.5; margin-top: 6px;">
                 Little confidence AT&T's needs could be met within Business Engine. A decision was made: FSM becomes its own product. Wholesale Engine is born.
             </p>
         </div>
@@ -73,12 +73,12 @@
         {{-- Main content: two-column layout --}}
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1280px; margin: 0 auto; width: 100%;">
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start;">
 
                 {{-- Left column: Timelines --}}
                 <div>
-                    <div class="pl08-stagger-3" style="margin-bottom: 20px;">
-                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <div class="pl08-stagger-3" style="margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
                             <div style="width: 6px; height: 6px; border-radius: 50%; background: #E86E4B;"></div>
                             <span style="font-family: 'Sora', sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(232,110,75,0.6);">Impossible Timelines</span>
                         </div>
@@ -128,7 +128,7 @@
                     </div>
 
                     {{-- ISP note --}}
-                    <div class="pl08-stagger-7" style="margin-top: 12px; padding-left: 80px;">
+                    <div class="pl08-stagger-7" style="margin-top: 6px; padding-left: 80px;">
                         <span style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.2); font-style: italic;">
                             ISP product was last priority
                         </span>
@@ -137,8 +137,8 @@
 
                 {{-- Right column: Team allocation --}}
                 <div>
-                    <div class="pl08-stagger-8" style="margin-bottom: 20px;">
-                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                    <div class="pl08-stagger-8" style="margin-bottom: 10px;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
                             <div style="width: 6px; height: 6px; border-radius: 50%; background: #11C18F;"></div>
                             <span style="font-family: 'Sora', sans-serif; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(17,193,143,0.6);">Team Allocation</span>
                         </div>
@@ -205,7 +205,7 @@
         </div>
 
         {{-- Bottom --}}
-        <div class="pl08-stagger-13 flex items-center justify-center" style="margin-top: 16px;">
+        <div class="pl08-stagger-13 flex items-center justify-center" style="margin-top: 8px;">
             <div class="flex items-center gap-4">
                 <div style="width: 60px; height: 1px; background: linear-gradient(to right, transparent, rgba(232,110,75,0.2));"></div>
                 <span style="font-family: 'Sora', sans-serif; font-size: 0.85rem; color: rgba(255,255,255,0.3);">
@@ -226,7 +226,7 @@
     .pl08-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+        font-size: clamp(2rem, 4vw, 3rem);
         letter-spacing: -0.03em;
         line-height: 1.05;
     }
@@ -248,11 +248,11 @@
     /* Fork SVG */
     .pl08-fork-svg {
         position: absolute;
-        top: 100px;
+        top: 80px;
         left: 50%;
         transform: translateX(-50%);
-        width: 600px;
-        height: 240px;
+        width: 550px;
+        height: 180px;
         z-index: 2;
         opacity: 0.5;
         pointer-events: none;
@@ -307,8 +307,8 @@
     .pl08-deadline-item {
         display: flex;
         align-items: flex-start;
-        gap: 20px;
-        padding: 16px 0;
+        gap: 16px;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(255,255,255,0.03);
     }
 
@@ -327,7 +327,7 @@
     .pl08-date-month {
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1;
         letter-spacing: -0.02em;
     }
@@ -381,10 +381,10 @@
     .pl08-team-card {
         display: flex;
         align-items: center;
-        gap: 16px;
-        padding: 16px 20px;
-        margin-bottom: 12px;
-        border-radius: 14px;
+        gap: 12px;
+        padding: 10px 16px;
+        margin-bottom: 8px;
+        border-radius: 12px;
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.04);
         transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -397,9 +397,9 @@
     }
 
     .pl08-team-avatar {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
         border: 1px solid;
         display: flex;
         align-items: center;
@@ -416,16 +416,16 @@
     .pl08-team-name {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         color: rgba(255,255,255,0.85);
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
 
     .pl08-team-role {
         display: flex;
         align-items: center;
         gap: 6px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
 
     .pl08-product-tag {
@@ -463,8 +463,8 @@
 
     /* Context box */
     .pl08-context-box {
-        margin-top: 16px;
-        padding: 14px 18px;
+        margin-top: 10px;
+        padding: 10px 14px;
         border-radius: 12px;
         background: rgba(255,255,255,0.015);
         border: 1px solid rgba(255,255,255,0.03);

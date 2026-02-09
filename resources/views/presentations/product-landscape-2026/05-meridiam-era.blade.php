@@ -18,7 +18,7 @@
     <svg id="pl05-network" class="absolute inset-0 w-full h-full pointer-events-none z-[2]" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1920 1080"></svg>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 36px 72px;">
 
         {{-- Top bar --}}
         <div class="pl05-stagger-1 flex items-center justify-between">
@@ -38,15 +38,15 @@
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1280px; margin: 0 auto; width: 100%;">
 
             {{-- Heading --}}
-            <div class="pl05-stagger-2" style="margin-bottom: 56px;">
-                <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <div class="pl05-stagger-2" style="margin-bottom: 32px;">
+                <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px;">
                     <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 12px rgba(17,193,143,0.4);"></div>
                     <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(17,193,143,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">Expansion</span>
                 </div>
                 <h1 class="pl05-headline">
                     The <span class="pl05-gradient-text">Meridiam</span> Era
                 </h1>
-                <p style="font-family: 'Sora', sans-serif; font-size: 1.05rem; color: rgba(255,255,255,0.35); max-width: 520px; line-height: 1.7; margin-top: 16px;">
+                <p style="font-family: 'Sora', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.35); max-width: 520px; line-height: 1.5; margin-top: 10px;">
                     COS signs with Meridiam through Fujitsu. The product landscape is 100% Business Engine. Growth accelerates.
                 </p>
             </div>
@@ -108,7 +108,7 @@
                     <div class="pl05-node-inner pl05-node-secondary">
                         <div class="pl05-node-icon">
                             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="color: #11C18F;">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
                             </svg>
                         </div>
                         <div class="pl05-node-label">HNet</div>
@@ -147,7 +147,7 @@
     .pl05-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+        font-size: clamp(2.2rem, 4.5vw, 3.5rem);
         letter-spacing: -0.03em;
         line-height: 1.05;
         color: rgba(255,255,255,0.9);
@@ -207,7 +207,7 @@
         position: relative;
         width: 100%;
         max-width: 900px;
-        height: 280px;
+        height: 260px;
     }
 
     .pl05-connectors {
@@ -248,16 +248,16 @@
 
     .pl05-node-top-right {
         left: 55%;
-        top: 5%;
+        top: 0%;
     }
 
     .pl05-node-bottom-right {
         left: 55%;
-        bottom: 5%;
+        bottom: 0%;
     }
 
     .pl05-node-inner {
-        padding: 20px 28px;
+        padding: 14px 22px;
         border-radius: 16px;
         backdrop-filter: blur(12px);
         transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -289,13 +289,13 @@
     }
 
     .pl05-node-icon {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .pl05-node-label {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         color: rgba(255,255,255,0.9);
         letter-spacing: -0.01em;
     }
@@ -319,7 +319,7 @@
     }
 
     .pl05-node-tag {
-        margin-top: 10px;
+        margin-top: 6px;
         display: inline-block;
         padding: 4px 10px;
         border-radius: 6px;

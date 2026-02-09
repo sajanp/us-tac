@@ -29,7 +29,7 @@
     </svg>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 36px 72px;">
 
         {{-- Top bar --}}
         <div class="pl04-stagger-1 flex items-center justify-between">
@@ -41,15 +41,15 @@
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1200px; margin: 0 auto; width: 100%;">
 
             {{-- TOP HALF: The Sting --}}
-            <div style="margin-bottom: 40px;">
-                <div class="pl04-stagger-2" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 20px;">
+                <div class="pl04-stagger-2" style="margin-bottom: 12px;">
                     <div class="inline-flex items-center gap-3">
                         <div style="width: 8px; height: 8px; border-radius: 50%; background: #E86E4B; box-shadow: 0 0 10px rgba(232,110,75,0.4);"></div>
                         <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(232,110,75,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">The Sting</span>
                     </div>
                 </div>
 
-                <div class="pl04-stagger-3" style="margin-bottom: 24px;">
+                <div class="pl04-stagger-3" style="margin-bottom: 14px;">
                     <h2 class="pl04-headline-sting">The SZ endeavor left <span class="pl04-coral-text">a few marks</span></h2>
                 </div>
 
@@ -96,7 +96,7 @@
             </div>
 
             {{-- TRANSITION: However --}}
-            <div class="pl04-stagger-5" style="margin-bottom: 36px;">
+            <div class="pl04-stagger-5" style="margin-bottom: 18px;">
                 <div class="pl04-however-container">
                     <div class="pl04-however-line-left"></div>
                     <span class="pl04-however-text">However...</span>
@@ -106,14 +106,14 @@
 
             {{-- BOTTOM HALF: The Silver Lining --}}
             <div>
-                <div class="pl04-stagger-6" style="margin-bottom: 20px;">
+                <div class="pl04-stagger-6" style="margin-bottom: 12px;">
                     <div class="inline-flex items-center gap-3">
                         <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 12px rgba(17,193,143,0.5);"></div>
                         <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(17,193,143,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">The Silver Lining</span>
                     </div>
                 </div>
 
-                <div class="pl04-stagger-7" style="margin-bottom: 28px;">
+                <div class="pl04-stagger-7" style="margin-bottom: 14px;">
                     <h2 class="pl04-headline-silver">
                         Nobody could have predicted<br><span class="pl04-green-text">the impact</span>
                     </h2>
@@ -152,7 +152,7 @@
     .pl04-headline-sting {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
         letter-spacing: -0.02em;
         line-height: 1.15;
         color: rgba(255,255,255,0.85);
@@ -160,7 +160,7 @@
     .pl04-headline-silver {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
         letter-spacing: -0.02em;
         line-height: 1.15;
         color: rgba(255,255,255,0.85);
@@ -203,8 +203,8 @@
     .pl04-sting-card {
         display: flex;
         align-items: flex-start;
-        gap: 14px;
-        padding: 14px 18px;
+        gap: 10px;
+        padding: 10px 14px;
         border-radius: 10px;
         background: rgba(232,110,75,0.02);
         border: 1px solid rgba(232,110,75,0.05);
@@ -215,7 +215,7 @@
         border-color: rgba(232,110,75,0.1);
     }
     .pl04-sting-icon {
-        width: 36px; height: 36px;
+        width: 30px; height: 30px;
         border-radius: 8px;
         background: rgba(232,110,75,0.06);
         border: 1px solid rgba(232,110,75,0.08);
@@ -228,15 +228,15 @@
     .pl04-sting-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: rgba(255,255,255,0.7);
-        margin-bottom: 3px;
+        margin-bottom: 2px;
     }
     .pl04-sting-desc {
         font-family: 'Sora', sans-serif;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         color: rgba(255,255,255,0.28);
-        line-height: 1.5;
+        line-height: 1.4;
     }
 
     /* However transition */
@@ -249,7 +249,7 @@
     .pl04-however-text {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #11C18F;
         text-shadow: 0 0 30px rgba(17,193,143,0.3);
         letter-spacing: -0.01em;
@@ -267,10 +267,10 @@
     .pl04-lining-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 14px;
     }
     .pl04-lining-card {
-        padding: 28px 24px;
+        padding: 18px 20px;
         border-radius: 14px;
         background: rgba(17,193,143,0.03);
         border: 1px solid rgba(17,193,143,0.08);
@@ -282,28 +282,28 @@
         box-shadow: 0 0 40px -10px rgba(17,193,143,0.1);
     }
     .pl04-lining-icon {
-        width: 44px; height: 44px;
+        width: 36px; height: 36px;
         border-radius: 10px;
         background: rgba(17,193,143,0.08);
         border: 1px solid rgba(17,193,143,0.12);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         color: #11C18F;
     }
     .pl04-lining-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 1.05rem;
+        font-size: 0.95rem;
         color: rgba(255,255,255,0.85);
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
     .pl04-lining-desc {
         font-family: 'Sora', sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         color: rgba(255,255,255,0.35);
-        line-height: 1.6;
+        line-height: 1.5;
     }
 
     /* Aurora backgrounds */

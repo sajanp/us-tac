@@ -18,7 +18,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 28px 72px;">
 
         {{-- Top bar --}}
         <div class="pl11-stagger-1 flex items-center justify-between">
@@ -27,27 +27,27 @@
         </div>
 
         {{-- Heading --}}
-        <div class="pl11-stagger-2" style="margin-top: 24px; margin-bottom: 40px;">
-            <div class="inline-flex items-center gap-3 mb-4">
+        <div class="pl11-stagger-2" style="margin-top: 10px; margin-bottom: 16px;">
+            <div class="inline-flex items-center gap-3 mb-2">
                 <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 12px rgba(17,193,143,0.4);"></div>
                 <span style="text-transform: uppercase; letter-spacing: 0.25em; font-size: 11px; color: rgba(17,193,143,0.7); font-weight: 600; font-family: 'Sora', sans-serif;">Current State</span>
             </div>
             <h1 class="pl11-headline">The Products Today</h1>
         </div>
 
-        {{-- Two columns --}}
-        <div class="flex-1 flex gap-0" style="max-width: 1200px; width: 100%;">
+        {{-- Three columns --}}
+        <div class="flex-1" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; max-width: 1400px; width: 100%;">
 
             {{-- FSM Column --}}
-            <div class="pl11-stagger-3 flex-1 flex flex-col" style="padding-right: 48px; border-right: 1px solid rgba(255,255,255,0.04);">
+            <div class="pl11-stagger-3 flex flex-col" style="padding-right: 28px; border-right: 1px solid rgba(255,255,255,0.04);">
 
-                <div class="pl11-col-header" style="margin-bottom: 28px;">
+                <div class="pl11-col-header" style="margin-bottom: 14px;">
                     <span class="pl11-product-badge pl11-fsm-badge">FSM</span>
                     <span class="pl11-col-subtitle">Breadth</span>
                 </div>
 
                 {{-- Live networks grid --}}
-                <div class="pl11-network-grid" style="margin-bottom: 28px;">
+                <div class="pl11-network-grid" style="margin-bottom: 14px;">
                     <div class="pl11-network pl11-net-1">
                         <div class="pl11-pulse-dot pl11-pulse-1"></div>
                         <span class="pl11-network-name">UBQ</span>
@@ -79,23 +79,23 @@
                 </div>
 
                 {{-- Kudos --}}
-                <div class="pl11-kudos pl11-stagger-5" style="margin-bottom: 20px;">
-                    <span style="font-family: 'Sora', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(17,193,143,0.5);">Kudos</span>
-                    <span style="font-family: 'Sora', sans-serif; font-size: 0.95rem; color: rgba(17,193,143,0.85); font-weight: 600;">Pablo, Dustin, Rogers</span>
+                <div class="pl11-kudos pl11-stagger-5" style="margin-bottom: 10px;">
+                    <span style="font-family: 'Sora', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(17,193,143,0.5);">Kudos</span>
+                    <span style="font-family: 'Sora', sans-serif; font-size: 0.85rem; color: rgba(17,193,143,0.85); font-weight: 600;">Pablo, Dustin, Rogers</span>
                 </div>
 
                 {{-- Lyte assessment --}}
                 <div class="pl11-assessment pl11-stagger-6">
                     <div class="pl11-assess-icon">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                             <path d="M8 1L10.2 5.5L15 6.2L11.5 9.6L12.4 14.4L8 12.1L3.6 14.4L4.5 9.6L1 6.2L5.8 5.5L8 1Z" fill="rgba(17,193,143,0.3)" stroke="#11C18F" stroke-width="0.8"/>
                         </svg>
                     </div>
                     <div>
-                        <p style="font-family: 'Sora', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.5;">
+                        <p style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.4;">
                             Lyte's assessment:
                         </p>
-                        <p style="font-family: 'Sora', sans-serif; font-size: 0.85rem; color: rgba(17,193,143,0.9); font-weight: 600; line-height: 1.5;">
+                        <p style="font-family: 'Sora', sans-serif; font-size: 0.8rem; color: rgba(17,193,143,0.9); font-weight: 600; line-height: 1.4;">
                             "Superior to what Gaiia has today."
                         </p>
                     </div>
@@ -104,41 +104,41 @@
             </div>
 
             {{-- WE Column --}}
-            <div class="pl11-stagger-4 flex-1 flex flex-col" style="padding-left: 48px;">
+            <div class="pl11-stagger-4 flex flex-col" style="padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.04);">
 
-                <div class="pl11-col-header" style="margin-bottom: 28px;">
+                <div class="pl11-col-header" style="margin-bottom: 14px;">
                     <span class="pl11-product-badge pl11-we-badge">WE</span>
                     <span class="pl11-col-subtitle">Depth</span>
                 </div>
 
                 {{-- AT&T anchor --}}
-                <div class="pl11-att-block" style="margin-bottom: 24px;">
+                <div class="pl11-att-block" style="margin-bottom: 14px;">
                     <div class="pl11-att-header">
                         <div class="pl11-att-dot"></div>
                         <span class="pl11-att-name">AT&T / PRIME</span>
-                        <span class="pl11-att-status">Live & Operational</span>
+                        <span class="pl11-att-status">Live</span>
                     </div>
-                    <p class="pl11-att-desc">PRI are happy and operational. AT&T recommends COS openly to new projects.</p>
+                    <p class="pl11-att-desc">PRI are happy. AT&T recommends COS openly to new projects.</p>
                 </div>
 
                 {{-- Quantum trust badge --}}
-                <div class="pl11-trust-badge pl11-stagger-5" style="margin-bottom: 24px;">
+                <div class="pl11-trust-badge pl11-stagger-5" style="margin-bottom: 14px;">
                     <div class="pl11-badge-border">
                         <div class="pl11-badge-inner">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink: 0;">
+                            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink: 0;">
                                 <path d="M10 1L12.5 4L16.5 3L15.5 7L19 9.5L16 12L17 16L13 15.5L10 19L7 15.5L3 16L4 12L1 9.5L4.5 7L3.5 3L7.5 4L10 1Z" fill="rgba(17,193,143,0.1)" stroke="rgba(17,193,143,0.4)" stroke-width="0.8"/>
                             </svg>
                             <div>
-                                <p style="font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Quantum Acquisition</p>
-                                <p style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.5;">People put their jobs on the line. COS delivered.</p>
+                                <p style="font-family: 'Cairo', sans-serif; font-weight: 700; font-size: 0.8rem; color: rgba(255,255,255,0.8);">Quantum Acquisition</p>
+                                <p style="font-family: 'Sora', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.4); line-height: 1.4;">People put their jobs on the line. COS delivered.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {{-- Pipeline --}}
-                <div class="pl11-stagger-6" style="margin-bottom: 20px;">
-                    <span style="font-family: 'Sora', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); display: block; margin-bottom: 12px;">Pipeline</span>
+                <div class="pl11-stagger-6" style="margin-bottom: 10px;">
+                    <span style="font-family: 'Sora', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); display: block; margin-bottom: 6px;">Pipeline</span>
                     <div class="pl11-pipeline-grid">
                         <div class="pl11-pipeline-node pl11-pipe-1">
                             <span>CityFibre</span>
@@ -158,9 +158,66 @@
                 {{-- Word is out --}}
                 <div class="pl11-stagger-7">
                     <div class="flex items-center gap-3">
-                        <div style="width: 30px; height: 1px; background: linear-gradient(to right, transparent, rgba(17,193,143,0.25));"></div>
-                        <p style="font-family: 'Sora', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic;">
+                        <div style="width: 24px; height: 1px; background: linear-gradient(to right, transparent, rgba(72,170,165,0.25));"></div>
+                        <p style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.35); font-style: italic;">
                             Word is out.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            {{-- BE Column --}}
+            <div class="pl11-stagger-be flex flex-col" style="padding-left: 28px;">
+
+                <div class="pl11-col-header" style="margin-bottom: 14px;">
+                    <span class="pl11-product-badge pl11-be-badge">BE</span>
+                    <span class="pl11-col-subtitle">Foundation</span>
+                </div>
+
+                {{-- Status --}}
+                <div class="pl11-be-status" style="margin-bottom: 14px;">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background: #11C18F; box-shadow: 0 0 10px rgba(17,193,143,0.5);"></div>
+                        <span style="font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 0.95rem; color: rgba(255,255,255,0.85);">Stronger than ever</span>
+                    </div>
+                    <p style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.5;">
+                        The original product is kicking. Shaping up to be a great ISP platform.
+                    </p>
+                </div>
+
+                {{-- Customer grid --}}
+                <div class="pl11-stagger-be2" style="margin-bottom: 14px;">
+                    <span style="font-family: 'Sora', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(17,193,143,0.5); display: block; margin-bottom: 8px;">Active Customers</span>
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <div class="pl11-be-customer pl11-be-cust-1">
+                            <div class="pl11-pulse-dot pl11-pulse-be"></div>
+                            <span>CitySide</span>
+                        </div>
+                        <div class="pl11-be-customer pl11-be-cust-2">
+                            <div class="pl11-pulse-dot pl11-pulse-be"></div>
+                            <span>Lyte</span>
+                        </div>
+                        <div class="pl11-be-customer pl11-be-cust-3">
+                            <div class="pl11-pulse-dot pl11-pulse-be"></div>
+                            <span>Hunter</span>
+                        </div>
+                        <div class="pl11-be-customer pl11-be-cust-4">
+                            <div class="pl11-pulse-dot pl11-pulse-be"></div>
+                            <span>Clearpath</span>
+                        </div>
+                        <div class="pl11-be-customer pl11-be-cust-5">
+                            <div class="pl11-pulse-dot pl11-pulse-be"></div>
+                            <span>Fiber First</span>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Kicker --}}
+                <div class="pl11-stagger-be3" style="margin-top: auto;">
+                    <div style="padding: 10px 14px; border-radius: 8px; background: rgba(17,193,143,0.04); border: 1px solid rgba(17,193,143,0.1);">
+                        <p style="font-family: 'Sora', sans-serif; font-size: 0.75rem; color: rgba(17,193,143,0.8); font-weight: 500; line-height: 1.5;">
+                            The foundation COS was built on. Still growing.
                         </p>
                     </div>
                 </div>
@@ -179,7 +236,7 @@
     .pl11-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+        font-size: clamp(1.9rem, 4vw, 2.8rem);
         letter-spacing: -0.03em;
         line-height: 1.08;
         color: rgba(255,255,255,0.9);
@@ -218,9 +275,9 @@
     .pl11-product-badge {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         letter-spacing: 0.05em;
-        padding: 4px 16px;
+        padding: 3px 12px;
         border-radius: 6px;
         border: 1px solid;
     }
@@ -245,29 +302,29 @@
     /* Network grid */
     .pl11-network-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
     }
     .pl11-network {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 10px 14px;
-        border-radius: 8px;
+        gap: 6px;
+        padding: 7px 10px;
+        border-radius: 6px;
         background: rgba(17,193,143,0.04);
         border: 1px solid rgba(17,193,143,0.08);
     }
     .pl11-pulse-dot {
-        width: 8px; height: 8px;
+        width: 6px; height: 6px;
         border-radius: 50%;
         background: #11C18F;
-        box-shadow: 0 0 8px rgba(17,193,143,0.4);
+        box-shadow: 0 0 6px rgba(17,193,143,0.4);
         flex-shrink: 0;
     }
     .pl11-network-name {
         font-family: 'Sora', sans-serif;
         font-weight: 600;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         color: rgba(255,255,255,0.7);
         letter-spacing: 0.05em;
     }
@@ -296,8 +353,8 @@
     .pl11-assessment {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
-        padding: 14px 16px;
+        gap: 10px;
+        padding: 10px 14px;
         border-radius: 8px;
         background: rgba(17,193,143,0.04);
         border: 1px solid rgba(17,193,143,0.1);
@@ -309,7 +366,7 @@
 
     /* AT&T block */
     .pl11-att-block {
-        padding: 18px 20px;
+        padding: 14px 16px;
         border-radius: 10px;
         background: rgba(72,170,165,0.05);
         border: 1px solid rgba(72,170,165,0.12);
@@ -317,19 +374,19 @@
     .pl11-att-header {
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin-bottom: 10px;
+        gap: 8px;
+        margin-bottom: 8px;
     }
     .pl11-att-dot {
-        width: 10px; height: 10px;
+        width: 8px; height: 8px;
         border-radius: 50%;
         background: #48AAA5;
-        box-shadow: 0 0 12px rgba(72,170,165,0.5);
+        box-shadow: 0 0 10px rgba(72,170,165,0.5);
     }
     .pl11-att-name {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: rgba(255,255,255,0.85);
     }
     .pl11-att-status {
@@ -358,8 +415,8 @@
     .pl11-badge-inner {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
-        padding: 14px 16px;
+        gap: 10px;
+        padding: 10px 14px;
         border-radius: 9px;
         background: rgba(17,193,143,0.03);
     }
@@ -374,7 +431,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 8px 12px;
+        padding: 6px 10px;
         border-radius: 6px;
         border: 1px dashed rgba(255,255,255,0.08);
         background: rgba(255,255,255,0.01);
@@ -385,6 +442,53 @@
         color: rgba(255,255,255,0.35);
         font-weight: 500;
     }
+
+    /* BE column */
+    .pl11-be-badge {
+        background: rgba(17,193,143,0.1);
+        border-color: rgba(17,193,143,0.25);
+        color: #11C18F;
+    }
+    .pl11-be-status {
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: rgba(17,193,143,0.04);
+        border: 1px solid rgba(17,193,143,0.1);
+    }
+    .pl11-be-customer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: rgba(17,193,143,0.03);
+        border: 1px solid rgba(17,193,143,0.06);
+        transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+    }
+    .pl11-be-customer:hover {
+        background: rgba(17,193,143,0.06);
+        border-color: rgba(17,193,143,0.12);
+        transform: translateX(3px);
+    }
+    .pl11-be-customer span {
+        font-family: 'Sora', sans-serif;
+        font-weight: 600;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.7);
+    }
+    .pl11-pulse-be {
+        animation: pl11-pulse 3.0s ease-in-out 0s infinite;
+    }
+
+    /* BE staggered reveals */
+    .pl11-stagger-be { opacity: 0; animation: pl11-reveal 0.9s cubic-bezier(0.22,1,0.36,1) 1.1s forwards; }
+    .pl11-stagger-be2 { opacity: 0; animation: pl11-reveal 0.8s cubic-bezier(0.22,1,0.36,1) 1.8s forwards; }
+    .pl11-stagger-be3 { opacity: 0; animation: pl11-reveal 0.8s cubic-bezier(0.22,1,0.36,1) 2.5s forwards; }
+    .pl11-be-cust-1 { opacity: 0; animation: pl11-reveal 0.5s cubic-bezier(0.22,1,0.36,1) 1.9s forwards; }
+    .pl11-be-cust-2 { opacity: 0; animation: pl11-reveal 0.5s cubic-bezier(0.22,1,0.36,1) 2.05s forwards; }
+    .pl11-be-cust-3 { opacity: 0; animation: pl11-reveal 0.5s cubic-bezier(0.22,1,0.36,1) 2.2s forwards; }
+    .pl11-be-cust-4 { opacity: 0; animation: pl11-reveal 0.5s cubic-bezier(0.22,1,0.36,1) 2.35s forwards; }
+    .pl11-be-cust-5 { opacity: 0; animation: pl11-reveal 0.5s cubic-bezier(0.22,1,0.36,1) 2.5s forwards; }
 
     /* Network staggered reveals */
     .pl11-net-1 { opacity: 0; animation: pl11-reveal 0.6s cubic-bezier(0.22,1,0.36,1) 1.4s forwards; }

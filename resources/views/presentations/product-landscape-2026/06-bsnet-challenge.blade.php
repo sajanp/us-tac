@@ -15,7 +15,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px;">
+    <div class="relative z-10 min-h-screen flex flex-col" style="padding: 36px 72px;">
 
         {{-- Top bar --}}
         <div class="pl06-stagger-1 flex items-center justify-between">
@@ -39,7 +39,7 @@
         <div class="flex-1 flex flex-col justify-center" style="max-width: 1200px; margin: 0 auto; width: 100%;">
 
             {{-- Heading --}}
-            <div class="pl06-stagger-2" style="margin-bottom: 48px;">
+            <div class="pl06-stagger-2" style="margin-bottom: 32px;">
                 <h1 class="pl06-headline">
                     The BSNet <span class="pl06-gradient-text">Challenge</span>
                 </h1>
@@ -162,7 +162,7 @@
     .pl06-headline {
         font-family: 'Cairo', sans-serif;
         font-weight: 800;
-        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-size: clamp(2.2rem, 4.5vw, 3.5rem);
         letter-spacing: -0.03em;
         line-height: 1.05;
         color: rgba(255,255,255,0.9);
@@ -181,8 +181,8 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 32px;
-        padding-top: 40px;
+        gap: 24px;
+        padding-top: 28px;
     }
 
     .pl06-track {
@@ -228,7 +228,7 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        margin-bottom: 24px;
+        margin-bottom: 18px;
         z-index: 2;
     }
 
@@ -278,7 +278,7 @@
     /* Milestone cards */
     .pl06-milestone-card {
         width: 100%;
-        padding: 24px;
+        padding: 18px;
         border-radius: 16px;
         background: rgba(255,255,255,0.02);
         border: 1px solid rgba(255,255,255,0.05);
@@ -303,19 +303,19 @@
 
     .pl06-milestone-eyebrow {
         font-family: 'Sora', sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.2em;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .pl06-milestone-title {
         font-family: 'Cairo', sans-serif;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: rgba(255,255,255,0.9);
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         letter-spacing: -0.01em;
     }
 
@@ -348,8 +348,8 @@
     .pl06-plan-detail {
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        margin-top: 14px;
+        gap: 5px;
+        margin-top: 10px;
     }
 
     .pl06-plan-item {
@@ -377,7 +377,7 @@
     .pl06-deadline-month {
         font-family: 'Cairo', sans-serif;
         font-weight: 900;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         color: #EFD61B;
         letter-spacing: -0.02em;
         line-height: 1;
