@@ -89,6 +89,8 @@
                             <span class="s2-name-tag">AT&amp;T</span>
                             <span class="s2-name-tag">Lumen</span>
                             <span class="s2-name-tag">Unwired</span>
+                            <span class="s2-name-tag">Iceland</span>
+                            <span class="s2-name-tag">Nigeria</span>
                         </div>
                     </div>
                 </div>
