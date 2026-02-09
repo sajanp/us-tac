@@ -5,9 +5,8 @@
         <div class="m3-dots"></div>
         <div class="m3-glow m3-glow-1"></div>
         <div class="m3-glow m3-glow-2"></div>
-        {{-- Fiber light traces --}}
-        <div class="m3-fiber m3-f1"><div class="m3-fiber-pulse"></div></div>
-        <div class="m3-fiber m3-f2"><div class="m3-fiber-pulse"></div></div>
+        {{-- Pulse rings canvas --}}
+        <canvas class="m3-rings" id="m3Rings"></canvas>
     </div>
 
     {{-- Content --}}
@@ -46,6 +45,7 @@
                     </div>
                     <ul class="m3-bullets">
                         <li>AT&T Physical Validation Testing kicks off <strong>February 17th</strong> — on-site with real customers in a live environment</li>
+                        <li><strong>BE Prod</strong> environment updates tomorrow (Fujitsu customers + Lyte not included)</li>
                     </ul>
                 </div>
             </div>
@@ -59,6 +59,7 @@
                     </div>
                     <ul class="m3-bullets">
                         <li><strong>FSM API Auth</strong> change complete — Fiber First goes live <strong>February 15th</strong></li>
+                        <li><strong>March</strong> development in progress — CFOC development + API improvements</li>
                     </ul>
                 </div>
             </div>
@@ -69,16 +70,21 @@
                 <div class="m3-card-inner">
                     <div class="m3-card-head">
                         <h2 class="m3-dept-name">Sales & Marketing</h2>
+                    </div>
+                    <div class="m3-badge-stack">
                         <div class="m3-card-badge" style="--accent: #11C18F;">
                             <span class="m3-badge-num" data-target="1528">0</span>
                             <span class="m3-badge-label">LinkedIn followers</span>
                         </div>
+                        <span class="m3-scribble-text m3-in-scribble">The board has noticed</span>
                     </div>
                     <ul class="m3-bullets">
                         <li><strong>Ashley</strong> shares takeaways from the 1Finity (Fujitsu) Fireside Chat</li>
                         <li>Pipeline and deal progress review</li>
                         <li><strong>Metro Connect</strong> — final preparations and collateral</li>
                         <li><strong>Open Access Day</strong> — actively pursuing new sponsors</li>
+                        <li><strong>ATIS/OANF</strong> — Sajan is Vice Chair</li>
+                        <li>Sajan, Mikael, and Isak now more active on LinkedIn (nicely encouraged)</li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +106,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Caveat:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
     /* ======= SLIDE 3 — MERIDIAN UPDATES ======= */
 
@@ -186,6 +192,7 @@
         flex: 1;
         padding: 10px 28px 10px 24px;
         min-width: 0;
+        position: relative;
     }
 
     .m3-card-head {
@@ -268,36 +275,40 @@
         margin: 8px 0 0 0;
     }
 
-    /* Fiber light traces */
-    .m3-fiber {
+    /* Handwritten scribble note */
+    .m3-badge-stack {
         position: absolute;
-        left: 0; right: 0;
-        height: 1px;
+        top: 8px;
+        right: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+    .m3-scribble-text {
+        font-family: 'Caveat', cursive;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: rgba(17,193,143,0.45);
+        white-space: nowrap;
+        transform: rotate(-2deg);
+        padding-right: 6px;
+    }
+    @keyframes m3-scribble-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    .m3-in-scribble {
+        opacity: 0;
+        animation: m3-scribble-in 0.5s ease 2.5s forwards;
+    }
+
+    /* Pulse rings canvas */
+    .m3-rings {
+        position: absolute;
+        inset: 0;
+        width: 100%; height: 100%;
         z-index: 1;
-    }
-    .m3-f1 { top: 35%; background: rgba(17,193,143,0.02); }
-    .m3-f2 { top: 72%; background: rgba(72,170,165,0.015); }
-    .m3-fiber-pulse {
-        position: absolute;
-        top: -1px;
-        width: 140px; height: 3px;
-        border-radius: 2px;
-        background: linear-gradient(90deg, transparent, rgba(17,193,143,0.5) 30%, #11C18F 50%, rgba(17,193,143,0.5) 70%, transparent);
-        filter: blur(0.5px);
-        box-shadow: 0 0 10px rgba(17,193,143,0.25);
-    }
-    .m3-f1 .m3-fiber-pulse {
-        animation: m3-fiber-run 8s cubic-bezier(0.4, 0, 0.2, 1) 2s infinite;
-    }
-    .m3-f2 .m3-fiber-pulse {
-        width: 100px;
-        animation: m3-fiber-run 10s cubic-bezier(0.4, 0, 0.2, 1) 5s infinite;
-    }
-    @keyframes m3-fiber-run {
-        0%   { left: -140px; opacity: 0; }
-        5%   { opacity: 1; }
-        90%  { opacity: 1; }
-        100% { left: 110%; opacity: 0; }
     }
 
     /* Entrances */
@@ -338,4 +349,82 @@
         // Start after entrance animation
         setTimeout(run, 700);
     });
+
+    // Pulse rings animation
+    (function() {
+        const canvas = document.getElementById('m3Rings');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let w, h;
+
+        function resize() {
+            w = canvas.width = canvas.offsetWidth;
+            h = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        // Two ring emitters at different positions
+        const emitters = [
+            { x: 0.75, y: 0.25, color: [17, 193, 143], interval: 4000, maxR: 400 },
+            { x: 0.15, y: 0.7, color: [72, 170, 165], interval: 5000, maxR: 350 },
+        ];
+
+        const rings = [];
+
+        emitters.forEach(em => {
+            // Seed a few rings at different ages so it doesn't start empty
+            for (let i = 0; i < 3; i++) {
+                rings.push({
+                    cx: em.x * w, cy: em.y * h,
+                    r: (em.maxR / 3) * i,
+                    maxR: em.maxR,
+                    color: em.color,
+                    born: performance.now() - (em.interval / 3) * i
+                });
+            }
+        });
+
+        let lastSpawn = [performance.now(), performance.now()];
+
+        function draw(now) {
+            ctx.clearRect(0, 0, w, h);
+
+            // Spawn new rings
+            emitters.forEach((em, i) => {
+                if (now - lastSpawn[i] > em.interval) {
+                    rings.push({
+                        cx: em.x * w, cy: em.y * h,
+                        r: 0,
+                        maxR: em.maxR,
+                        color: em.color,
+                        born: now
+                    });
+                    lastSpawn[i] = now;
+                }
+            });
+
+            // Draw and update rings
+            for (let i = rings.length - 1; i >= 0; i--) {
+                const ring = rings[i];
+                const age = (now - ring.born) / 6000; // 6s lifespan
+                if (age > 1) { rings.splice(i, 1); continue; }
+
+                ring.r = Math.max(0, ring.maxR * age);
+                // Fade in then out
+                const alpha = age < 0.15
+                    ? (age / 0.15) * 0.12
+                    : 0.12 * (1 - (age - 0.15) / 0.85);
+
+                ctx.beginPath();
+                ctx.arc(ring.cx, ring.cy, ring.r, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(${ring.color[0]},${ring.color[1]},${ring.color[2]},${alpha})`;
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(draw);
+        }
+        requestAnimationFrame(draw);
+    })();
 </script>
