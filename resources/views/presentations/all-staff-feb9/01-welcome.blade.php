@@ -8,6 +8,10 @@
         <div class="m1-diag m1-d4"></div>
         <div class="m1-diag m1-d5"></div>
         <div class="m1-glow"></div>
+        {{-- Fiber light traces --}}
+        <div class="m1-fiber m1-f1"><div class="m1-fiber-pulse"></div></div>
+        <div class="m1-fiber m1-f2"><div class="m1-fiber-pulse"></div></div>
+        <div class="m1-fiber m1-f3"><div class="m1-fiber-pulse"></div></div>
     </div>
 
     {{-- Horizon line --}}
@@ -19,9 +23,13 @@
     {{-- Content --}}
     <div class="relative z-10 min-h-screen flex flex-col" style="padding: 56px 72px 48px 88px;">
 
-        {{-- Top: logo --}}
-        <div class="flex items-center justify-between m1-in-1">
-            <img src="/cos-systems-logo.svg" alt="COS Systems" style="width: 44px; height: 44px; opacity: 0.85;" />
+        {{-- Top: logo — prominent --}}
+        <div class="m1-logo-row m1-in-1">
+            <div class="m1-logo-wrap">
+                <div class="m1-logo-ring"></div>
+                <img src="/cos-systems-logo.svg" alt="COS Systems" class="m1-logo-img" />
+            </div>
+            <span class="m1-logo-name">COS Systems</span>
         </div>
 
         {{-- Hero: left-aligned title --}}
@@ -140,6 +148,78 @@
     @keyframes m1-drift-b {
         0%, 100% { transform: rotate(25deg) translateX(0); }
         50% { transform: rotate(25deg) translateX(-20px); }
+    }
+
+    /* Prominent logo */
+    .m1-logo-row {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    .m1-logo-wrap {
+        position: relative;
+        width: 60px; height: 60px;
+        flex-shrink: 0;
+    }
+    .m1-logo-img {
+        width: 60px; height: 60px;
+        position: relative;
+        z-index: 2;
+    }
+    .m1-logo-ring {
+        position: absolute;
+        inset: -8px;
+        border-radius: 14px;
+        border: 1px solid rgba(17,193,143,0.15);
+        animation: m1-ring-pulse 4s ease-in-out infinite;
+    }
+    @keyframes m1-ring-pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(1.12); }
+    }
+    .m1-logo-name {
+        font-family: 'Cairo', sans-serif;
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: rgba(255,255,255,0.5);
+        letter-spacing: 0.04em;
+    }
+
+    /* Fiber light traces */
+    .m1-fiber {
+        position: absolute;
+        left: 0; right: 0;
+        height: 1px;
+        z-index: 3;
+    }
+    .m1-f1 { top: 22%; background: rgba(17,193,143,0.025); }
+    .m1-f2 { top: 58%; background: rgba(72,170,165,0.02); }
+    .m1-f3 { top: 82%; background: rgba(17,193,143,0.018); }
+    .m1-fiber-pulse {
+        position: absolute;
+        top: -1px;
+        width: 160px; height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, transparent, rgba(17,193,143,0.6) 30%, #11C18F 50%, rgba(17,193,143,0.6) 70%, transparent);
+        filter: blur(0.5px);
+        box-shadow: 0 0 12px rgba(17,193,143,0.3);
+    }
+    .m1-f1 .m1-fiber-pulse {
+        animation: m1-fiber-run 7s cubic-bezier(0.4, 0, 0.2, 1) 1.5s infinite;
+    }
+    .m1-f2 .m1-fiber-pulse {
+        width: 120px;
+        animation: m1-fiber-run 9s cubic-bezier(0.4, 0, 0.2, 1) 3s infinite;
+    }
+    .m1-f3 .m1-fiber-pulse {
+        width: 100px;
+        animation: m1-fiber-run 6s cubic-bezier(0.4, 0, 0.2, 1) 5s infinite;
+    }
+    @keyframes m1-fiber-run {
+        0%   { left: -160px; opacity: 0; }
+        5%   { opacity: 1; }
+        90%  { opacity: 1; }
+        100% { left: 110%; opacity: 0; }
     }
 
     /* Hero typography — LEFT ALIGNED */

@@ -4,6 +4,7 @@
     <div class="absolute inset-0 pointer-events-none">
         <div class="m2-grid"></div>
         <div class="m2-glow"></div>
+        <canvas class="m2-fiber-canvas" id="m2FiberCanvas"></canvas>
     </div>
 
     {{-- Content --}}
@@ -292,4 +293,86 @@
     .m2-in-9  { opacity: 0; animation: m2-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards; }
     .m2-in-10 { opacity: 0; animation: m2-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.1s forwards; }
     .m2-in-11 { opacity: 0; animation: m2-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.3s forwards; }
+
+    /* Fiber network canvas */
+    .m2-fiber-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%; height: 100%;
+    }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('m2FiberCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let w, h;
+
+        function resize() {
+            w = canvas.width = canvas.offsetWidth;
+            h = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        // Fiber particles
+        const particles = [];
+        const count = 35;
+        const maxDist = 140;
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                vx: (Math.random() - 0.5) * 0.3,
+                vy: (Math.random() - 0.5) * 0.3,
+                r: Math.random() * 1.5 + 0.5,
+                o: Math.random() * 0.3 + 0.05
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, w, h);
+
+            // Update positions
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0) p.x = w;
+                if (p.x > w) p.x = 0;
+                if (p.y < 0) p.y = h;
+                if (p.y > h) p.y = 0;
+            });
+
+            // Draw connections
+            for (let i = 0; i < count; i++) {
+                for (let j = i + 1; j < count; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < maxDist) {
+                        const alpha = (1 - dist / maxDist) * 0.06;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(17,193,143,${alpha})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Draw particles
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(17,193,143,${p.o})`;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    });
+</script>

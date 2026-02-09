@@ -4,6 +4,7 @@
     <div class="absolute inset-0 pointer-events-none">
         <div class="m4-grid"></div>
         <div class="m4-glow"></div>
+        <canvas class="m4-data-stream" id="m4DataStream"></canvas>
     </div>
 
     {{-- Content --}}
@@ -422,10 +423,67 @@
     .m4-in-5 { opacity: 0; animation: m4-in 0.7s ease-out 0.5s forwards; }
     .m4-in-6 { opacity: 0; animation: m4-in 0.7s ease-out 0.8s forwards; }
     .m4-in-7 { opacity: 0; animation: m4-in 0.6s ease-out 1.2s forwards; }
+
+    /* Data stream canvas */
+    .m4-data-stream {
+        position: absolute;
+        inset: 0;
+        width: 100%; height: 100%;
+    }
 </style>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Data stream particles
+        const canvas = document.getElementById('m4DataStream');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let w, h;
+            function resize() {
+                w = canvas.width = canvas.offsetWidth;
+                h = canvas.height = canvas.offsetHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            const dots = [];
+            for (let i = 0; i < 28; i++) {
+                dots.push({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vy: -(Math.random() * 0.25 + 0.08),
+                    vx: (Math.random() - 0.5) * 0.1,
+                    r: Math.random() * 1.2 + 0.4,
+                    o: Math.random() * 0.15 + 0.03,
+                    phase: Math.random() * Math.PI * 2
+                });
+            }
+
+            function drawStream() {
+                ctx.clearRect(0, 0, w, h);
+                const t = performance.now() * 0.001;
+                dots.forEach(d => {
+                    d.y += d.vy;
+                    d.x += d.vx + Math.sin(t + d.phase) * 0.08;
+                    if (d.y < -10) { d.y = h + 10; d.x = Math.random() * w; }
+                    const pulse = 0.5 + 0.5 * Math.sin(t * 2 + d.phase);
+                    ctx.beginPath();
+                    ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(17,193,143,${d.o * (0.6 + 0.4 * pulse)})`;
+                    ctx.fill();
+                    // Faint trail
+                    ctx.beginPath();
+                    ctx.moveTo(d.x, d.y);
+                    ctx.lineTo(d.x - d.vx * 8, d.y - d.vy * 12);
+                    ctx.strokeStyle = `rgba(17,193,143,${d.o * 0.3})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                });
+                requestAnimationFrame(drawStream);
+            }
+            drawStream();
+        }
+
         // Animated percentage counter
         const pctEl = document.querySelector('.m4-pct');
         if (!pctEl) return;

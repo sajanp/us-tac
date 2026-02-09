@@ -5,6 +5,9 @@
         <div class="m3-dots"></div>
         <div class="m3-glow m3-glow-1"></div>
         <div class="m3-glow m3-glow-2"></div>
+        {{-- Fiber light traces --}}
+        <div class="m3-fiber m3-f1"><div class="m3-fiber-pulse"></div></div>
+        <div class="m3-fiber m3-f2"><div class="m3-fiber-pulse"></div></div>
     </div>
 
     {{-- Content --}}
@@ -20,8 +23,48 @@
         {{-- Single-column department cards --}}
         <div class="m3-flow flex-1">
 
-            {{-- Sales & Marketing --}}
+            {{-- General & Mikael --}}
             <div class="m3-card m3-in-2">
+                <div class="m3-card-accent" style="--accent: #11C18F;"></div>
+                <div class="m3-card-inner">
+                    <div class="m3-card-head">
+                        <h2 class="m3-dept-name">General & Mikael</h2>
+                    </div>
+                    <ul class="m3-bullets">
+                        <li>ISO progress is on track — please complete your training modules and review relevant policies</li>
+                        <li>Pre-audit is scheduled for <strong>February 19th</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Onboarding & CS --}}
+            <div class="m3-card m3-in-3">
+                <div class="m3-card-accent" style="--accent: #48AAA5;"></div>
+                <div class="m3-card-inner">
+                    <div class="m3-card-head">
+                        <h2 class="m3-dept-name">Onboarding & CS</h2>
+                    </div>
+                    <ul class="m3-bullets">
+                        <li>AT&T Physical Validation Testing kicks off <strong>February 17th</strong> — on-site with real customers in a live environment</li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Product & Development --}}
+            <div class="m3-card m3-in-4">
+                <div class="m3-card-accent" style="--accent: #48AAA5;"></div>
+                <div class="m3-card-inner">
+                    <div class="m3-card-head">
+                        <h2 class="m3-dept-name">Product & Development</h2>
+                    </div>
+                    <ul class="m3-bullets">
+                        <li><strong>FSM API Auth</strong> change complete — Fiber First goes live <strong>February 15th</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Sales & Marketing --}}
+            <div class="m3-card m3-in-5">
                 <div class="m3-card-accent" style="--accent: #11C18F;"></div>
                 <div class="m3-card-inner">
                     <div class="m3-card-head">
@@ -36,46 +79,6 @@
                         <li>Pipeline and deal progress review</li>
                         <li><strong>Metro Connect</strong> — final preparations and collateral</li>
                         <li><strong>Open Access Day</strong> — actively pursuing new sponsors</li>
-                    </ul>
-                </div>
-            </div>
-
-            {{-- General & Mikael --}}
-            <div class="m3-card m3-in-3">
-                <div class="m3-card-accent" style="--accent: #11C18F;"></div>
-                <div class="m3-card-inner">
-                    <div class="m3-card-head">
-                        <h2 class="m3-dept-name">General & Mikael</h2>
-                    </div>
-                    <ul class="m3-bullets">
-                        <li>ISO progress is on track — please complete your training modules and review relevant policies</li>
-                        <li>Pre-audit is scheduled for <strong>February 19th</strong></li>
-                    </ul>
-                </div>
-            </div>
-
-            {{-- Onboarding & CS --}}
-            <div class="m3-card m3-in-4">
-                <div class="m3-card-accent" style="--accent: #48AAA5;"></div>
-                <div class="m3-card-inner">
-                    <div class="m3-card-head">
-                        <h2 class="m3-dept-name">Onboarding & CS</h2>
-                    </div>
-                    <ul class="m3-bullets">
-                        <li>AT&T Physical Validation Testing kicks off <strong>February 17th</strong> — on-site with real customers in a live environment</li>
-                    </ul>
-                </div>
-            </div>
-
-            {{-- Product & Development --}}
-            <div class="m3-card m3-in-5">
-                <div class="m3-card-accent" style="--accent: #48AAA5;"></div>
-                <div class="m3-card-inner">
-                    <div class="m3-card-head">
-                        <h2 class="m3-dept-name">Product & Development</h2>
-                    </div>
-                    <ul class="m3-bullets">
-                        <li><strong>FSM API Auth</strong> change complete — Fiber First goes live <strong>February 15th</strong></li>
                     </ul>
                 </div>
             </div>
@@ -263,6 +266,38 @@
         color: rgba(255,255,255,0.2);
         font-style: italic;
         margin: 8px 0 0 0;
+    }
+
+    /* Fiber light traces */
+    .m3-fiber {
+        position: absolute;
+        left: 0; right: 0;
+        height: 1px;
+        z-index: 1;
+    }
+    .m3-f1 { top: 35%; background: rgba(17,193,143,0.02); }
+    .m3-f2 { top: 72%; background: rgba(72,170,165,0.015); }
+    .m3-fiber-pulse {
+        position: absolute;
+        top: -1px;
+        width: 140px; height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, transparent, rgba(17,193,143,0.5) 30%, #11C18F 50%, rgba(17,193,143,0.5) 70%, transparent);
+        filter: blur(0.5px);
+        box-shadow: 0 0 10px rgba(17,193,143,0.25);
+    }
+    .m3-f1 .m3-fiber-pulse {
+        animation: m3-fiber-run 8s cubic-bezier(0.4, 0, 0.2, 1) 2s infinite;
+    }
+    .m3-f2 .m3-fiber-pulse {
+        width: 100px;
+        animation: m3-fiber-run 10s cubic-bezier(0.4, 0, 0.2, 1) 5s infinite;
+    }
+    @keyframes m3-fiber-run {
+        0%   { left: -140px; opacity: 0; }
+        5%   { opacity: 1; }
+        90%  { opacity: 1; }
+        100% { left: 110%; opacity: 0; }
     }
 
     /* Entrances */
